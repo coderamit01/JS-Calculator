@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./css/output.css" rel="stylesheet">
+</head>
+<body>
+  <section class="h-screen flex items-center justify-center bg-[#dde0ec] px-4 md:px-0">
+    <div class="w-full  md:w-[380px] bg-[#040821] rounded-lg flex flex-col items-stretch justify-between pt-4">
+      <!-- Theme Mode Button  -->
+      <div class="text-start inline-block ps-3">
+        <div class="inline-flex items-center justify-end bg-[#1E212F] rounded-sm">
+          <i class="ri-sun-fill py-1 px-2  text-center border-r border-r-[#32343C] text-slate-400 hover:text-slate-50 active:text-slate-50 cursor-pointer"></i>
+          <i class="ri-moon-fill py-1 px-2  text-center text-slate-400 hover:text-slate-50 active:text-slate-50 cursor-pointer"></i>
+        </div>
+      </div>
+      <!-- Result Display  -->
+      <div class="h-48 p-5 flex flex-col gap-1 items-end text-white justify-end">
+        <p class="text-base font-semibold text-slate-200">30x40=</p>
+        <h2 class="text-4xl font-semibold text-slate-50">90</h2>
+      </div>
+      <!-- Keypad  -->
+      <div class="bg-[#191C2F] grid grid-cols-4 gap-2 px-5 pt-8 pb-5 rounded-t-3xl rounded-b-lg">
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">AC</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">+/-</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-percent-line"></i>
+        </span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-divide-line"></i>
+        </span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">7</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">8</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">9</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-close-line"></i>
+        </span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">4</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">5</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">6</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-subtract-line"></i>
+        </span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">1</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">2</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">3</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-add-line"></i>
+        </span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">0</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">,</span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-sm font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-stop-mini-fill"></i>
+        </span>
+        <span class="transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer">
+          <i class="ri-equal-line"></i>
+        </span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
