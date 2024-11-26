@@ -626,10 +626,6 @@ video {
   gap: 0.5rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -672,18 +668,13 @@ video {
   background-color: rgb(30 33 47 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#2C324D\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(44 50 77 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[\#dde0ec\] {
   --tw-bg-opacity: 1;
   background-color: rgb(221 224 236 / var(--tw-bg-opacity, 1));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-transparent {
+  background-color: transparent;
 }
 
 .p-5 {
@@ -734,6 +725,10 @@ video {
   text-align: start;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -744,16 +739,6 @@ video {
   line-height: 1.5rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .font-semibold {
   font-weight: 600;
 }
@@ -761,11 +746,6 @@ video {
 .text-slate-200 {
   --tw-text-opacity: 1;
   color: rgb(226 232 240 / var(--tw-text-opacity, 1));
-}
-
-.text-slate-300 {
-  --tw-text-opacity: 1;
-  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
 }
 
 .text-slate-400 {
@@ -783,7 +763,21 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.transition {
+.calculator-btn {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 50 77 / var(--tw-bg-opacity, 1));
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -791,7 +785,12 @@ video {
   transition-duration: 150ms;
 }
 
-.hover\:bg-\[\#202f55\]:hover {
+.calculator-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 47 85 / var(--tw-bg-opacity, 1));
+}
+
+.calculator-btn:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(32 47 85 / var(--tw-bg-opacity, 1));
 }
@@ -799,11 +798,6 @@ video {
 .hover\:text-slate-50:hover {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity, 1));
-}
-
-.focus\:bg-\[\#202f55\]:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 47 85 / var(--tw-bg-opacity, 1));
 }
 
 .active\:text-slate-50:active {
