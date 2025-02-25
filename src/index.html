@@ -20,41 +20,41 @@
           <i
             class="ri-sun-fill py-1 px-2  text-center border-r border-r-[#32343C] text-slate-400 hover:text-slate-50 active:text-slate-50 cursor-pointer"></i>
           <i
-            class="ri-moon-fill py-1 px-2  text-center text-slate-400 hover:text-slate-50 active:text-slate-50 cursor-pointer"></i>
+            class="ri-moon-fill py-1 px-2  text-center text-slate-50 hover:text-slate-50 active:text-slate-50 cursor-pointer "></i>
         </div>
       </div>
       <!-- Result Display  -->
       <form>
         <div class="h-48 p-5 flex flex-col gap-1 items-end text-white justify-end">
-          <input type="text" id="calculate" class="text-base font-semibold text-slate-200 w-full bg-transparent text-end" value="" />
-          <input type="text" id="res"  class="text-4xl font-semibold text-slate-50 w-full bg-transparent text-end" value="" />
+          <input type="text" id="calculate" class="text-base font-semibold text-slate-200 w-full bg-transparent text-end outline-none focus:outline-none" value="" disabled />
+          <input type="text" id="res"  class="text-3xl font-semibold text-slate-50 w-full bg-transparent text-end outline-none focus:outline-none" value=""  disabled />
         </div>
         <!-- Keypad  -->
         <div class="bg-[#191C2F] grid grid-cols-4 gap-2 px-5 pt-8 pb-5 rounded-t-3xl rounded-b-lg">
-          <button type="button" class="calculator-btn">AC</button>
-          <button type="button" class="calculator-btn">X</button>
-          <button type="button" class="calculator-btn">%</button>
-          <button type="button" class="calculator-btn">/</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="cleanDisplay()">AC</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="deletNum()">DEL</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="operator('%')">%</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="operator('/')">/</button>
 
-          <button type="button" class="calculator-btn">7</button>
-          <button type="button" class="calculator-btn">8</button>
-          <button type="button" class="calculator-btn">9</button>
-          <button type="button" class="calculator-btn">*</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('7')">7</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('8')">8</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('9')">9</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="operator('*')">*</button>
 
-          <button type="button" class="calculator-btn">4</button>
-          <button type="button" class="calculator-btn">5</button>
-          <button type="button" class="calculator-btn">6</button>
-          <button type="button" class="calculator-btn">-</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('4')">4</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('5')">5</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('6')">6</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="operator('-')">-</button>
 
-          <button type="button" class="calculator-btn">1</button>
-          <button type="button" class="calculator-btn">2</button>
-          <button type="button" class="calculator-btn">3</button>
-          <button type="button" class="calculator-btn">+</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('1')">1</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('2')">2</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('3')">3</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="operator('+')">+</button>
 
-          <button type="button" class="calculator-btn">0</button>
-          <button type="button" class="calculator-btn">,</button>
-          <button type="button" class="calculator-btn">.</button>
-          <button type="button" class="calculator-btn">=</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('0')">0</button>
+          <button type="button" class="calculator-btn ct-bg">,</button>
+          <button type="button" class="calculator-btn ct-bg" onclick="appendNumber('.')">.</button>
+          <button type="button" class="calculator-btn bg-[#008001] text-white" onclick="calc()">=</button>
         </div>
       </form>
     </div>

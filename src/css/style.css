@@ -4,6 +4,9 @@
 
 @layer utilities {
   .calculator-btn {
-    @apply transition p-2 rounded bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300 text-center text-xl font-semibold flex items-center justify-center cursor-pointer;
+    @apply transition p-2 rounded  text-center text-xl font-semibold flex items-center justify-center cursor-pointer;
+  }
+  .ct-bg {
+    @apply bg-[#2C324D] hover:bg-[#202f55] focus:bg-[#202f55] text-slate-300;
   }
 }
