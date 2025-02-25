@@ -7,15 +7,16 @@ let op = '';
 
 const appendNumber = (number) => {
   currentInput += number;
-  display.value = currentInput;
+  display.value = firstValue + op + currentInput;
 };
 
 const operator = (operator) => {
   if(currentInput === '') return;
   firstValue = currentInput;
   op = operator;
-  currentInput = '';
   display.value = firstValue + op;
+  currentInput = '';
+
 };
 
 const calc = () => {
@@ -47,15 +48,21 @@ const calc = () => {
   }
   
   display.value = result;
-  console.log(display.value)
+  document.getElementById('result').value = firstValue + op + currentInput;
+  currentInput = result;
+  firstValue = '';
 };
 
 const cleanDisplay = () => {
-  display.value = '';
   currentInput = '';
+  firstValue = '';
+  op = '';
+  display.value = '0';
+  document.getElementById('result').value = '';
 };
 
 const deletNum = () => {
+  display.value = display.value.slice(0,-1);
   currentInput = currentInput.slice(0, -1);
-  display.value = currentInput;
 };
+
